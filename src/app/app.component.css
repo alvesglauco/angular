@@ -1,0 +1,75 @@
+.bordaTabela {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.bordaTabela td, .bordaTabela th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.bordaTabela tr:nth-child(even){background-color: #f2f2f2;}
+
+.bordaTabela tr:hover {background-color: #ddd;}
+
+.bordaTabela th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #581845;
+  color: white;}
+
+  /*estilo para ngClass*/
+.color {
+  color: blue;
+ }
+ .size {
+  font-size: 35px;
+ }
+
+ a:link, a:visited {
+  background-color: #848686;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+a:hover, a:active {
+ background-color: #BD9696;
+}
+
+input[type = text], input[type = password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #B3A9A9;
+  box-sizing: border-box;
+ }
+ input[type = submit] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #B3A9A9;
+  box-sizing: border-box;
+ }
+
+ input[type = text], input[type = password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #B3A9A9;
+  box-sizing: border-box;
+ }
+ input[type = submit] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #B3A9A9;
+  box-sizing: border-box;
+ }
