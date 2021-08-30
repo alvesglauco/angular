@@ -13,7 +13,7 @@ export class AppComponent implements OnChanges, OnInit, DoCheck,
 AfterContentInit, AfterContentChecked,AfterViewInit, AfterViewChecked,OnDestroy{
   title = 'angular-first';
   produtos!:Produto[];
-  productService;
+  //productService;
 
   /*aqui, vamos implementar os codigos*/
   public x:number = 10;
@@ -62,10 +62,9 @@ AfterContentInit, AfterContentChecked,AfterViewInit, AfterViewChecked,OnDestroy{
 
  exibirFilho: boolean=false
 
- constructor() {
+ constructor(private productService: ProductService) {
   console.log("AppComponent:Constructor");
-    this.productService = new ProductService();
-  }
+ }
 
   obterProdutos() {
     this.produtos = this.productService.getProdutos();

@@ -16,6 +16,8 @@ import {registerLocaleData} from '@angular/common';
 import { RaizQuadrada } from './pipe-raiz-quadrada';
 import { HomeComponent } from './home/home.component';
 import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component';
+import { ProductService } from './product.service';
+import { LoggerService } from './logger.service';
 
 
 registerLocaleData(localePt, 'pt');
@@ -39,7 +41,7 @@ registerLocaleData(localePt, 'pt');
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [ {
+  providers: [ ProductService, LoggerService,{
     provide: LOCALE_ID,
     useValue: 'pt'
     },

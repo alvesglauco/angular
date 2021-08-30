@@ -1,13 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Produto } from './product';
+import { LoggerService } from './logger.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
-  constructor() {
-  }
+  constructor(private loggerService: LoggerService) {
+    this.loggerService.log("ProductService foi construido");
+   }
 
   public getProdutos() {
     let produtos:Produto[];
