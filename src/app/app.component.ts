@@ -2,8 +2,8 @@ import {  Component, AfterContentChecked, AfterContentInit,
   AfterViewChecked, AfterViewInit ,
    DoCheck, OnChanges, OnDestroy, OnInit, Input, SimpleChanges } from '@angular/core';
    import { FormGroup, FormControl, Validators } from '@angular/forms';
-
-
+import { ProductService } from './product.service';
+import { Produto } from './product';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,6 +12,8 @@ import {  Component, AfterContentChecked, AfterContentInit,
 export class AppComponent implements OnChanges, OnInit, DoCheck,
 AfterContentInit, AfterContentChecked,AfterViewInit, AfterViewChecked,OnDestroy{
   title = 'angular-first';
+  produtos!:Produto[];
+  productService;
 
   /*aqui, vamos implementar os codigos*/
   public x:number = 10;
@@ -62,7 +64,14 @@ AfterContentInit, AfterContentChecked,AfterViewInit, AfterViewChecked,OnDestroy{
 
  constructor() {
   console.log("AppComponent:Constructor");
+    this.productService = new ProductService();
   }
+
+  obterProdutos() {
+    this.produtos = this.productService.getProdutos();
+   103
+    }
+
   toggle() {
   this.exibirFilho =! this.exibirFilho;
   }

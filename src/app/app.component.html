@@ -538,6 +538,33 @@ ts como object
  </div>
  <p> O email informado foi : {{ email }} </p>
 
+ <div>
+  <h1><strong>Implementação </strong>Services</h1>
+  <button type="button" (click)="obterProdutos()">Obter Produtos</button>
+  <div>
+  <br />
+  <table class="bordaTabela">
+  <thead>
+  <tr>
+  <th>Identificação do Produto</th>
+  <th>Nome do Produto</th>
+  <th>Preço do Produto</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let x of produtos;">
+  <td>{{ x.idProduto }}</td>
+  <td>{{ x.nomeProduto }}</td>
+  <td>{{ x.precoProduto }}</td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
+</div>
+
+
+
+
   <!--- AQUI, IMPLEMENTAR OS CODIGOS -->
 
   <svg id="clouds" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677" viewBox="0 0 2611.084 485.677">
